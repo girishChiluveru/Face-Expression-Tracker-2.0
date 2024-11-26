@@ -12,6 +12,7 @@ const reportRoutes = require('./routes/report1');
 const processRoutes = require('./routes/process');
 const analyzeRoutes = require('./routes/analyze');
 const emotionRoutes = require('./routes/storeEmotions');
+const storeScoresRoutes = require('./routes/storeScores');
 
 const app = express();
 const PORT = 3000;
@@ -39,7 +40,7 @@ app.use('/reports', reportRoutes);
 app.use('/process', processRoutes);
 app.use('/analyze', analyzeRoutes);
 app.use('/store-emotions', emotionRoutes);
-
+app.use('/store-scores', storeScoresRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
     

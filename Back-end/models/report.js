@@ -39,6 +39,10 @@ const reportSchema = new mongoose.Schema({
             score: { type: Number, required: false }
         }
     }],
+    scores: [{ // New field to store scores
+        gameType: { type: String, required: true },
+        score: { type: Number, required: true }
+    }]
 }, { timestamps: true }); // Automatically adds createdAt and updatedAt fields.
 
 const reports = mongoose.model('report', reportSchema);
